@@ -1,4 +1,4 @@
-package tw.designpattern.behavior.strategy;
+package tw.designpattern.behavior.strategy1;
 
 /**
  * Created by chiachen on 2016/10/29.
