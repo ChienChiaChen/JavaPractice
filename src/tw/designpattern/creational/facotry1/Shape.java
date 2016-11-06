@@ -5,5 +5,4 @@ package tw.designpattern.creational.facotry1;
  */
 public interface Shape {
     void draw();
-
 }
