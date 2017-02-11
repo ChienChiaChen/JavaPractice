@@ -1,11 +1,11 @@
-package tw.designpattern.Structural.proxy;
+package tw.designpattern.structural.proxy1;
 
-import tw.designpattern.Structural.RealImage;
+
 
 /**
  * Created by chiachen on 2017/1/9.
  */
-public class ProxyImage implements tw.designpattern.Structural.proxy.Image {
+public class ProxyImage implements tw.designpattern.structural.proxy1.Image {
     private RealImage realImage;
     private String fileName;
 

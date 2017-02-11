@@ -1,11 +1,11 @@
-package tw.designpattern.Structural.proxy;
+package tw.designpattern.structural.proxy1;
 
 /**
  * Created by chiachen on 2017/1/9.
  */
 public class ProxyPatternDemo {
     public static void main(String[] args) {
-        tw.designpattern.Structural.proxy.Image image = new tw.designpattern.Structural.proxy.ProxyImage("test_10mb.jpg");
+        tw.designpattern.structural.proxy1.Image image = new tw.designpattern.structural.proxy1.ProxyImage("test_10mb.jpg");
 
         //image will be loaded from disk
         image.display();
