@@ -1,8 +1,6 @@
-package tw.designpattern.Behavior.command2;
+package tw.designpattern.behavior.command2;
 
-/**
- * Created by chiachen on 2017/1/19.
- */
+
 public class Stock {
     private String name = "ABC";
     private int quantity = 10;

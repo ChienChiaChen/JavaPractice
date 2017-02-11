@@ -1,4 +1,4 @@
-package tw.designpattern.Behavior.command1;
+package tw.designpattern.behavior.command1;
 
 
 public interface Drawing {

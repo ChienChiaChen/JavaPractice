@@ -1,8 +1,6 @@
-package tw.designpattern.Behavior.command1;
+package tw.designpattern.behavior.command1;
 
-/**
- * Created by chiachen on 2017/1/19.
- */
+
 public class Main {
     public static void main(String[] args) {
         ImageService service = new ImageService();
