@@ -1,4 +1,4 @@
-package tw.designpattern.NullPointPattern;
+package tw.designpattern.nullpointpattern;
 
 /**
  * Created by chiachen on 2017/1/7.
