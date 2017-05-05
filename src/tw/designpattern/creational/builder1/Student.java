@@ -38,6 +38,17 @@ public class Student {
         return address;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "stuId=" + stuId +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
     public static class StudentBuilder {
         private  int stuId;
         private  String name;
@@ -46,7 +57,8 @@ public class Student {
         private String address;
 
         public StudentBuilder(int stuId, String name) {
-
+            this.stuId = stuId;
+            this.name = name;
         }
 
         public StudentBuilder setAge(int age) {
