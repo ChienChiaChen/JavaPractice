@@ -1,4 +1,4 @@
-package tw.designpattern.structural.Decorator2;
+package tw.designpattern.structural.decorator2;
 
 /**
  * Created by Jason_Chien on 2017/5/3.

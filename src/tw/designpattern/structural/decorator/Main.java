@@ -1,4 +1,4 @@
-package tw.designpattern.creational.decorator;
+package tw.designpattern.structural.decorator;
 
 /**
  * Created by chiachen on 2017/1/18.
@@ -9,6 +9,11 @@ public class Main {
         Avatar avatar2 = new RedHair(new Wizard());
         Avatar avatar3 = new GreenHair(new Worrior());
         Avatar avatar4 = new GreenHair(new Wizard());
+
+        System.out.println(avatar1.describe());
+//        avatar2.describe();
+//        avatar3.describe();
+//        avatar4.describe();
 
     }
 }

@@ -1,4 +1,4 @@
-package tw.designpattern.structural.Decorator1;
+package tw.designpattern.structural.decorator1;
 
 import java.util.ArrayList;
 
