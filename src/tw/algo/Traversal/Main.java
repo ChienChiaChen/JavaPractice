@@ -11,37 +11,21 @@ public class Main {
         Data lright= new Data.DataBuilder("E").build();
         Data lleft= new Data.DataBuilder("D").build();
         Data left= new Data.DataBuilder("B").setLeft(lleft).setRight(lright).build();
+//        Data right = new Data.DataBuilder("C").build();
+//        Data left = new Data.DataBuilder("B").build();
         Data root = new Data.DataBuilder("A").setLeft(left).setRight(right).build();
-        printPreorder(root);
-        System.out.println();
-        printInorder(root);
-        System.out.println();
-        printPostorder(root);
+
+        System.out.println("\nprintPreorder");
+        Recursive.printPreorder(root);
+        System.out.println("\nprintInorder");
+        Recursive.printInorder(root);
+        System.out.println("\nprintPostorder");
+        Recursive.printPostorder(root);
+        System.out.println("\nprintPostorderIte");
+        NonRecursive.printPostorderIte(root);
     }
 
-    public static void printPreorder(Data root) {
-        if (root == null) {
-            return;
-        }
-        System.out.print(root.data+"  ");
-        printPreorder(root.left);
-        printPreorder(root.right);
-    }
-    public static void printInorder(Data root) {
-        if (root == null) {
-            return;
-        }
 
-        printPreorder(root.left);
-        System.out.print(root.data+"  ");
-        printPreorder(root.right);
-    }
-    public static void printPostorder(Data root) {
-        if (root == null) {
-            return;
-        }
-        printPreorder(root.left);
-        printPreorder(root.right);
-        System.out.print(root.data+"  ");
-    }
+
+
 }
