@@ -15,7 +15,7 @@ public class Main {
 //        Data left = new Data.DataBuilder("B").build();
         Data root = new Data.DataBuilder("A").setLeft(left).setRight(right).build();
 
-        System.out.println("\nprintPreorder");
+        System.out.println("\nprintPreorder");//
         Recursive.printPreorder(root);
         System.out.println("\nprintInorder");
         Recursive.printInorder(root);
