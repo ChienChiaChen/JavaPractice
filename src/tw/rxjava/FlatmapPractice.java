@@ -15,30 +15,58 @@ public class FlatmapPractice {
         student2.addCourse("Locking");
         student2.addCourse("Popping");
 
-        student2.getCourses().forEach(System.out::println);
+//        student2.getCourses().forEach(System.out::println);
 
         Student[] studentNames = new Student[]{student1, student2};
 
+//        Observable.from(studentNames)
+//                .map(new Func1<Student, String>() {
+//                    @Override
+//                    public String call(Student student) {
+//                        return student.getmName();
+//                    }
+//                }).subscribe(new Subscriber<String>() {
+//                    @Override
+//                    public void onNext(String s) {
+//                        System.out.println(s);
+//                    }
+//                    @Override
+//                    public void onCompleted() {
+//                        System.out.println("=========");
+//                        System.out.println("Completed");
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//                        System.out.println(e.getMessage());
+//                    }
+//                });
+
         Observable.from(studentNames)
-                .map(new Func1<Student, String>() {
+                .flatMap(new Func1<Student, Observable<String>>() {
                     @Override
-                    public String call(Student student) {
-                        return student.getmName();
+                    public Observable<String> call(Student student) {
+                        return Observable.from(student.getCourses());
                     }
                 }).subscribe(new Subscriber<String>() {
                     @Override
-                    public void onNext(String s) {
-                        System.out.println(s);
+                    public void onStart() {
+                        System.out.println("onStart============");
                     }
+
                     @Override
                     public void onCompleted() {
-                        System.out.println("=========");
-                        System.out.println("Completed");
+                        System.out.println("Completed============");
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        System.out.println(e.getMessage());
+
+                    }
+
+                    @Override
+                    public void onNext(String s) {
+                        System.out.println(s);
                     }
                 });
 
