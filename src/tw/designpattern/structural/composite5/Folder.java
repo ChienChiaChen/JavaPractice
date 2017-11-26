@@ -4,7 +4,7 @@ package tw.designpattern.structural.composite5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Folder implements AbstractFile {
+public class Folder implements Composite {
     private String mName;
     private List<AbstractFile> mFileList = new ArrayList<>();
 
@@ -29,5 +29,10 @@ public class Folder implements AbstractFile {
         for (AbstractFile abstractFile : mFileList) {
             abstractFile.killFil();
         }
+    }
+
+    @Override
+    public AbstractFile getChild(int index) {
+        return (mFileList.size() > index) ? mFileList.get(index) : null;
     }
 }
