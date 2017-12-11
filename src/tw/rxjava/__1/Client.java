@@ -9,7 +9,7 @@ import io.reactivex.disposables.Disposable;
 
 public class Client {
     public static void main(String[] args) {//ObservableOnSubscribe
-        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+        Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> observableEmitter) throws Exception {
 //                void onNext(@NonNull T var1);
@@ -23,9 +23,7 @@ public class Client {
                 observableEmitter.onComplete();
 
             }
-        }); 
-
-        Observer<Integer> observer = new Observer<Integer>() {
+        }).subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable disposable) {
 
@@ -45,9 +43,7 @@ public class Client {
             public void onComplete() {
                 System.out.println("Complete");
             }
-        };
-
-        observable.subscribe(observer);
+        });
 
     }
 }
